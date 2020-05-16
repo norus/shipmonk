@@ -90,6 +90,7 @@ if __name__ == '__main__':
         res = []
         [res.append(i) for i in list(filter(lambda name: name['warehouse']['name'] == 'California', rates))]
         df = pd.DataFrame({'Carrier': [i['service'] for i in res], 'Delivery': [i['delivery_time'] for i in res], 'Cost': [i['cost'] for i in res]})
-        print(df)
+        if not df.empty:
+            df.to_csv('{}/{}.csv'.format(args.carrier, args.zip), index=False)
     else:
         parser.print_help()
