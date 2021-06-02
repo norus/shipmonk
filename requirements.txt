@@ -11,4 +11,4 @@ pyzipcode==2.0.0
 requests==2.23.0
 six==1.14.0
 tabulate==0.8.7
-urllib3==1.25.9
+urllib3==1.26.5
